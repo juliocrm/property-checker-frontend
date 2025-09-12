@@ -1,7 +1,9 @@
+import './Header.css';
+
 function Header() {
   return (
     <header>
-      <h1>Properties Checker</h1>
+      <h1>Property Hub</h1>
     </header>
   );
 }

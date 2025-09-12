@@ -1,0 +1,19 @@
+header {
+    background-image: url('../../assets/hero2.webp');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 0;
+}
