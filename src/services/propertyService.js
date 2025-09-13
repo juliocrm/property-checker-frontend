@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5083/api';
+const API_BASE_URL = 'https://propchecker-cwbqfbemefd6f5de.canadacentral-01.azurewebsites.net/api';
 
 /**
  * Fetches the transaction traces for a specific property.

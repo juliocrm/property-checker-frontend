@@ -17,7 +17,7 @@ export const useProperties = () => {
       }, {});
 
       const queryParams = new URLSearchParams(activeFilters).toString();
-      const url = `http://localhost:5083/api/Property${queryParams ? `?${queryParams}` : ''}`;
+      const url = `https://propchecker-cwbqfbemefd6f5de.canadacentral-01.azurewebsites.net/api/property${queryParams ? `?${queryParams}` : ''}`;
 
       const response = await fetch(url);
       if (!response.ok) {
