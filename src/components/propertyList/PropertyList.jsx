@@ -1,7 +1,7 @@
 import './PropertyList.css';
 import PropertyCard from '../propertyCard/PropertyCard';
 
-function PropertyList({ properties, loading, error }) {
+function PropertyList({ properties, loading, error, onCardClick }) {
   if (loading) {
     return <p>Loading properties...</p>;
   }
@@ -17,7 +17,7 @@ function PropertyList({ properties, loading, error }) {
   return (
     <div className="property-list">
       {properties.map((property) => (
-        <PropertyCard key={property.id} property={property} />
+        <PropertyCard key={property.id} property={property} onClick={onCardClick} />
       ))}
     </div>
   );
