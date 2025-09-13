@@ -5,6 +5,7 @@ import PropertyFilterForm from './components/propertyFilterForm/PropertyFilterFo
 import PropertyList from './components/PropertyList/PropertyList';
 import Header from './components/header/Header';
 import PropertyModal from './components/propertyModal/PropertyModal';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [filters, setFilters] = useState({});
@@ -34,6 +35,7 @@ function App() {
         <PropertyFilterForm onSearch={handleSearch} initialFilters={filters} />
         <PropertyList properties={properties} loading={loading} error={error} onCardClick={handleCardClick} />
       </main>
+      <Footer />
       <PropertyModal property={selectedProperty} onClose={handleCloseModal} />
     </div>
   );

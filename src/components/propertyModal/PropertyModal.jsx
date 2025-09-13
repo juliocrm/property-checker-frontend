@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
 import './PropertyModal.css';
+import { fetchPropertyTrace } from '../../services/propertyService';
 
+/**
+ * Displays a modal with detailed information about a property,
+ * including its transaction trace fetched from an API.
+ * @param {{property: object, onClose: function}} props
+ * @returns {JSX.Element|null}
+ */
 function PropertyModal({ property, onClose }) {
   const [trace, setTrace] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -13,14 +20,8 @@ function PropertyModal({ property, onClose }) {
         setError(null);
         setTrace(null);
         try {
-          const response = await fetch(`http://localhost:5083/api/properties/${property.id}/traces`);
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          const data = await response.json();
-          if (data && data.length > 0) {
-            setTrace(data[0]);
-          }
+          const data = await fetchPropertyTrace(property.id);
+          setTrace(data);
         } catch (e) {
           setError(e.message);
         } finally {
@@ -36,6 +37,10 @@ function PropertyModal({ property, onClose }) {
     return null;
   }
 
+  /**
+   * Prevents the modal from closing when clicking inside its content.
+   * @param {React.MouseEvent} e - The mouse event.
+   */
   const handleModalContentClick = (e) => {
     e.stopPropagation();
   };

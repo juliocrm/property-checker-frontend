@@ -1,6 +1,13 @@
+import React from 'react';
 import './PropertyCard.css';
 
-function PropertyCard({ property, onClick }) {
+/**
+ * A card component to display a summary of a property.
+ * It is memoized to prevent unnecessary re-renders.
+ * @param {{property: object, onClick: function}} props
+ * @returns {JSX.Element|null}
+ */
+const PropertyCard = React.memo(function PropertyCard({ property, onClick }) {
   if (!property) {
     return null;
   }
@@ -15,6 +22,6 @@ function PropertyCard({ property, onClick }) {
       </div>
     </div>
   );
-}
+});
 
 export default PropertyCard;
