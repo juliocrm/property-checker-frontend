@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { useProperties } from './hooks/useProperties';
-import PropertyFilterForm from './components/PropertyFilterForm/PropertyFilterForm';
+import PropertyFilterForm from './components/propertyFilterForm/PropertyFilterForm';
 import PropertyList from './components/PropertyList/PropertyList';
-import Header from './components/Header/Header';
+import Header from './components/header/Header';
 
 function App() {
   const [filters, setFilters] = useState({});

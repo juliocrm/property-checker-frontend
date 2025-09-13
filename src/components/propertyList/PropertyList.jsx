@@ -1,4 +1,5 @@
-import PropertyCard from '../PropertyCard/PropertyCard';
+import './PropertyList.css';
+import PropertyCard from '../propertyCard/PropertyCard';
 
 function PropertyList({ properties, loading, error }) {
   if (loading) {
