@@ -42,7 +42,6 @@ function PropertyFilterForm({ onSearch, initialFilters }) {
         onChange={(e) => setAddress(e.target.value)}
       />
       <input
-        className="price"
         type="number"
         placeholder="Min Price"
         value={minPrice}
@@ -50,7 +49,6 @@ function PropertyFilterForm({ onSearch, initialFilters }) {
         onChange={(e) => setMinPrice(e.target.value)}
       />
       <input
-        className="price"
         type="number"
         placeholder="Max Price"
         value={maxPrice}

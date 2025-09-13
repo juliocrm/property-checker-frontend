@@ -33,13 +33,9 @@
     }
 
     .filters-focused {
-        height: 222px !important;
+        height: 285px !important;
         overflow: hidden;
         transition: height 0.3s ease;
-    }
-
-    .filters .price {
-        width: 42%;
     }
 
     button {
